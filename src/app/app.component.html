@@ -1,6 +1,7 @@
 <h1>List of Students</h1>
 <div>
-  <button (click)="getStudents()">Click to Get Students</button>
+  <button [ngClass]="btnStyle" (click)="getStudents()">Click to Get Students</button>
+  || <button (click)="changeColor()">Change the Button Color</button>
 </div>
 <table class="table tble=small">
   <tr>
@@ -8,7 +9,8 @@
     <th>Number</th>
     <th>Color</th>
   </tr>
-  <tr *ngFor="let student of students">
+  <tr *ngFor="let student of students" 
+       [hidden]="student.favColor == 'Grey'">
     <td>{{student.name}}</td>
     <td>{{student.favNumber}}</td>
     <td>{{student.favColor}}</td>
