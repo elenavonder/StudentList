@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  students: any [] = [];
+  students: any [];
   studentCollection: any[] = [
     {name: "Tonya", favNumber: 743747, favColor: "Green"},
     {name: "Jack", favNumber: 32842, favColor: "Red"},
